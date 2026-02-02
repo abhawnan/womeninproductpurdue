@@ -1,10 +1,11 @@
 :root {
-  --bg: #391F30;
+  --bg: #2A1622; /* darker, deeper plum */
   --text: #ffffff;
   --subtext: #f3c6dc;
   --accent: #e8a3c2;
-  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-bg: rgba(255, 255, 255, 0.06);
 }
+
 
 * {
   margin: 0;
@@ -17,6 +18,19 @@ body {
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.04),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* NAVBAR */
@@ -123,18 +137,29 @@ h2 {
 .about {
   display: flex;
   gap: 80px;
+  align-items: flex-start;
 }
+
+.about-left,
+.about-right {
+  flex: 1;
+}
+
 
 .about-left p {
   margin-top: 20px;
   color: var(--subtext);
+  max-width: 600px;
 }
 
 .values-card {
   background: var(--card-bg);
-  padding: 40px;
-  border-radius: 16px;
+  padding: 48px;
+  border-radius: 20px;
+  max-width: 520px;
+  margin-left: auto;
 }
+
 
 .values-card ul {
   list-style: none;
@@ -142,8 +167,10 @@ h2 {
 }
 
 .values-card li {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
+
 
 /* WHAT WE DO */
 .cards {
