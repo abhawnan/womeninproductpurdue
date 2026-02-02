@@ -222,47 +222,47 @@ h2 {
 }
 
 /* TEAM */
+.team {
+  padding-top: 120px;
+}
+
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 40px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* Card */
 .team-card {
   position: relative;
-  border-radius: 20px;
+  border-radius: 24px;
   overflow: hidden;
-  background: var(--card-bg);
-  height: 320px;
+  background: rgba(255, 255, 255, 0.05);
+  height: 360px;
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .team-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
 }
 
-.team-card:hover img {
-  transform: scale(1.05);
-}
-
-/* Overlay */
+/* Hover overlay */
 .team-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(42, 22, 34, 0.95);
-  color: white;
+  background: rgba(42, 22, 34, 0.96);
   opacity: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 24px;
   text-align: center;
+  padding: 32px;
   transition: opacity 0.3s ease;
 }
 
@@ -270,6 +270,7 @@ h2 {
   opacity: 1;
 }
 
+/* Text */
 .team-overlay h3 {
   margin-bottom: 8px;
 }
@@ -283,7 +284,7 @@ h2 {
 .team-overlay span {
   font-size: 14px;
   color: var(--subtext);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .team-overlay a {
@@ -297,9 +298,10 @@ h2 {
   border-color: var(--accent);
 }
 
+/* Glow on hover */
 .team-card:hover {
-  box-shadow: 0 0 0 1px rgba(232, 163, 194, 0.4),
-              0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4),
+              0 0 0 1px rgba(232,163,194,0.35);
 }
 
 /* FOOTER */
