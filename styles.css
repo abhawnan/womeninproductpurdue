@@ -35,11 +35,23 @@ body::before {
 
 /* NAVBAR */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 80px;
+
+  padding: 20px 80px;
+
+  background: rgba(20, 10, 18, 0.55); /* transparent plum */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
+
 
 .nav-left {
   display: flex;
@@ -54,14 +66,52 @@ body::before {
 .club-name {
   font-weight: 600;
   font-size: 18px;
+  letter-spacing: 0.4px;
 }
 
 .nav-links a {
   margin-left: 32px;
   text-decoration: none;
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  position: relative;
+  transition: color 0.25s ease;
 }
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+  pointer-events: none;
+}
+
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
 
 /* HERO */
 .hero {
