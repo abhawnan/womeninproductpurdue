@@ -42,16 +42,25 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px 80px;
 
-    background: rgba(20, 10, 18, 0.55);
-    /* transparent plum */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(42, 22, 34, 0.65);
+    /* closer to site bg */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+.navbar {
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
+}
+
+body.scrolled .navbar {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
 
 
 .nav-left {
@@ -216,32 +225,33 @@ h2 {
 
 
 .values-card ul {
-  list-style: none; /* remove default bullets */
-  margin-top: 24px;
-  padding: 0;
+    list-style: none;
+    /* remove default bullets */
+    margin-top: 24px;
+    padding: 0;
 }
 
 .values-card li {
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 18px;
-  line-height: 1.5;
-  color: var(--subtext);
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+    color: var(--subtext);
 }
 
 .values-card li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--accent);
-  font-size: 20px;
-  line-height: 1;
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    font-size: 20px;
+    line-height: 1;
 }
 
 .values-card li strong {
-  color: var(--text);
-  font-weight: 600;
+    color: var(--text);
+    font-weight: 600;
 }
 
 
