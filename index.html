@@ -114,60 +114,67 @@
             </p>
         </div>
 
-        <div class="team-grid">
+        <div class="team-slider-wrapper">
+            <button class="slider-btn left" onclick="slideLeft()">&#8592;</button>
 
-            <div class="team-card">
-                <img src="assets/venya.jpg" alt="Venya Bhardwaj" />
-                <div class="team-overlay">
-                    <h3>Venya Bhardwaj</h3>
-                    <p>President</p>
-                    <span>Computer Engineering · Junior</span>
-                    <a href="https://www.linkedin.com/in/venya-bhardwaj-609a6722a/" target="_blank">LinkedIn</a>
+            <div class="team-slider" id="teamSlider">
+
+                <div class="team-card">
+                    <img src="assets/venya.jpg" alt="Venya Bhardwaj" />
+                    <div class="team-overlay">
+                        <h3>Venya Bhardwaj</h3>
+                        <p>President</p>
+                        <span>Computer Engineering · Junior</span>
+                        <a href="https://www.linkedin.com/in/venya-bhardwaj-609a6722a/" target="_blank">LinkedIn</a>
+                    </div>
                 </div>
+
+                <div class="team-card">
+                    <img src="assets/melissa.jpg" alt="Melissa Tran" />
+                    <div class="team-overlay">
+                        <h3>Melissa Tran</h3>
+                        <p>Co-Founder & VP</p>
+                        <span>First Year Engineering · Freshman</span>
+                        <a href="https://www.linkedin.com/in/melissa-tran07/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/anjali.jpg" alt="Anjali Bhawnani" />
+                    <div class="team-overlay">
+                        <h3>Anjali Bhawnani</h3>
+                        <p>VP</p>
+                        <span>Computer Science · Sophomore</span>
+                        <a href="https://www.linkedin.com/in/anjali-bhawnani06/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/shreya.jpg" alt="Shreya Ramamurthy" />
+                    <div class="team-overlay">
+                        <h3>Shreya Ramamurthy</h3>
+                        <p>VP</p>
+                        <span>Computer Science · Junior</span>
+                        <a href="https://www.linkedin.com/in/shreya-ramamurthy/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="assets/aarna.jpg" alt="Aarna Dey" />
+                    <div class="team-overlay">
+                        <h3>Aarna Dey</h3>
+                        <p>VP</p>
+                        <span>BAIM · Sophomore</span>
+                        <a href="https://www.linkedin.com/in/aarnadey/" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="team-card">
-                <img src="assets/melissa.jpg" alt="Melissa Tran" />
-                <div class="team-overlay">
-                    <h3>Melissa Tran</h3>
-                    <p>Co-Founder & VP</p>
-                    <span>First Year Engineering · Freshman</span>
-                    <a href="https://www.linkedin.com/in/melissa-tran07/" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <img src="assets/anjali.jpg" alt="Anjali Bhawnani" />
-                <div class="team-overlay">
-                    <h3>Anjali Bhawnani</h3>
-                    <p>VP</p>
-                    <span>Computer Science · Sophomore</span>
-                    <a href="https://www.linkedin.com/in/anjali-bhawnani06/" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <img src="assets/shreya.jpg" alt="Shreya Ramamurthy" />
-                <div class="team-overlay">
-                    <h3>Shreya Ramamurthy</h3>
-                    <p>VP</p>
-                    <span>Computer Science · Junior</span>
-                    <a href="https://www.linkedin.com/in/shreya-ramamurthy/" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <img src="assets/aarna.jpg" alt="Aarna Dey" />
-                <div class="team-overlay">
-                    <h3>Aarna Dey</h3>
-                    <p>VP</p>
-                    <span>BAIM · Sophomore</span>
-                    <a href="https://www.linkedin.com/in/aarnadey/" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-
+            <button class="slider-btn right" onclick="slideRight()">&#8594;</button>
         </div>
     </section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="contact">
@@ -191,6 +198,18 @@
     <footer>
         <p>© 2026 Women in Product @ Purdue</p>
     </footer>
+
+    <script>
+        const slider = document.getElementById("teamSlider");
+
+        function slideRight() {
+            slider.scrollBy({ left: 360, behavior: "smooth" });
+        }
+
+        function slideLeft() {
+            slider.scrollBy({ left: -360, behavior: "smooth" });
+        }
+    </script>
 
 </body>
 
