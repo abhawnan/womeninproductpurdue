@@ -475,9 +475,6 @@ h2 {
     }
 }
 
-.logo-marquee:hover .logo-track {
-    animation-play-state: paused;
-}
 
 .logo-marquee::before,
 .logo-marquee::after {
