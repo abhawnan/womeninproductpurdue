@@ -53,12 +53,12 @@ body::before {
 }
 
 .navbar {
-  box-shadow: none;
-  transition: box-shadow 0.3s ease;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
 }
 
 body.scrolled .navbar {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -424,6 +424,82 @@ h2 {
 .slider-btn:hover {
     background: rgba(232, 163, 194, 0.15);
 }
+
+/* LOGO SECTION */
+.logo-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.logo-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--subtext);
+    margin-bottom: 40px;
+}
+
+/* Marquee container */
+.logo-marquee {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Track that moves */
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: max-content;
+    animation: scroll-logos 30s linear infinite;
+}
+
+/* Logo styling */
+.logo-track img {
+    height: 48px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+
+.logo-track img:hover {
+    opacity: 1;
+}
+
+/* Animation */
+@keyframes scroll-logos {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+}
+
+.logo-marquee::before,
+.logo-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.logo-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg), transparent);
+}
+
+
 
 
 /* FOOTER */
