@@ -42,36 +42,6 @@ body::before {
     overflow: hidden;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(135deg,
-            #24101b 0%,
-            #3f2032 30%,
-            #5a2a44 55%,
-            #24101b 100%);
-
-    background-size: 200% 200%;
-    background-position: var(--bg-pos, 50% 50%);
-
-    transition: background-position 0.08s linear;
-    z-index: -1;
-}
-
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top,
-            rgba(255, 255, 255, 0.06),
-            transparent 65%);
-    pointer-events: none;
-    z-index: -1;
-}
-
 
 
 @keyframes waveMove {

@@ -43,6 +43,29 @@
             <a href="#contact" class="primary-btn">Join Us</a>
             <a href="#about" class="secondary-btn">Learn More</a>
         </div>
+
+        <!-- SVG Wave -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="waveGradient" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#2A1622" />
+                        <stop offset="50%" stop-color="#3a1f2e" />
+                        <stop offset="100%" stop-color="#2A1622" />
+                    </linearGradient>
+                </defs>
+
+                <path fill="url(#waveGradient)"
+                    d="M0,64 C120,90 240,40 360,48 480,56 600,96 720,96 840,96 960,56 1080,48 1200,40 1320,80 1440,64 L1440,0 L0,0 Z">
+                    <animate attributeName="d" dur="12s" repeatCount="indefinite" values="
+                M0,64 C120,90 240,40 360,48 480,56 600,96 720,96 840,96 960,56 1080,48 1200,40 1320,80 1440,64 L1440,0 L0,0 Z;
+                M0,72 C120,48 240,96 360,80 480,64 600,32 720,40 840,48 960,88 1080,96 1200,104 1320,56 1440,64 L1440,0 L0,0 Z;
+                M0,64 C120,90 240,40 360,48 480,56 600,96 720,96 840,96 960,56 1080,48 1200,40 1320,80 1440,64 L1440,0 L0,0 Z
+                " />
+                </path>
+            </svg>
+        </div>
+
     </section>
 
     <!-- ABOUT SECTION -->
@@ -331,22 +354,6 @@
         function slideLeft() {
             slider.scrollBy({ left: -360, behavior: "smooth" });
         }
-    </script>
-
-    <script>
-        const hero = document.querySelector(".hero");
-
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-            const heroHeight = hero.offsetHeight;
-
-            const progress = Math.min(scrollY / heroHeight, 1);
-
-            const x = 50 + progress * 35;
-            const y = 50 + progress * 25;
-
-            hero.style.setProperty("--bg-pos", `${x}% ${y}%`);
-        });
     </script>
 
 
