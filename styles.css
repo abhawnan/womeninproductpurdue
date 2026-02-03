@@ -584,6 +584,12 @@ h2 {
     padding: 12px;
 }
 
+@media (max-width: 768px) {
+    .calendar-wrapper iframe {
+        height: 500px;
+    }
+}
+
 
 
 
