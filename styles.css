@@ -47,13 +47,12 @@ body::before {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg,
-            #24101b 0%,
-            #3f2032 30%,
-            #5a2a44 55%,
-            #24101b 100%);
-
+            #2A1622 0%,
+            #3a1f2e 30%,
+            #4a2338 55%,
+            #2A1622 100%);
     background-size: 200% 200%;
-    background-position: var(--bg-position, 50% 50%);
+    background-position: 50% 50%;
     transition: background-position 0.1s linear;
     z-index: -1;
 }
