@@ -73,7 +73,7 @@ body::before {
 /* SVG Wave */
 .hero-wave {
     position: absolute;
-    bottom: 0;
+    bottom: -1[x];
     left: 0;
     width: 100%;
     height: 160px;
@@ -83,6 +83,20 @@ body::before {
     /* BELOW content */
     pointer-events: none;
 }
+
+.hero-wave svg {
+    display: block;
+    /* 👈 VERY IMPORTANT */
+    width: 100%;
+    height: 120px;
+}
+
+.about {
+    background-color: #2A1622;
+    /* exact same as wave bottom */
+}
+
+
 
 /*.hero-wave svg {
     width: 100%;
