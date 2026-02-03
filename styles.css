@@ -1,5 +1,5 @@
 :root {
-    --bg: #2A1622;
+    --bg-solid: #2A1622;
     /* darker, deeper plum */
     --text: #ffffff;
     --subtext: #f3c6dc;
@@ -26,12 +26,9 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: radial-gradient(circle at top,
-            rgba(255, 255, 255, 0.04),
-            transparent 60%);
-    pointer-events: none;
-    z-index: -1;
+    background: none;
 }
+
 
 body::after {
     content: "";
@@ -110,9 +107,11 @@ body::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
-            transparent 40%,
-            var(--bg) 100%);
+    background: radial-gradient(circle at top,
+            rgba(255, 255, 255, 0.05),
+            transparent 65%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 
@@ -132,6 +131,15 @@ body::after {
     pointer-events: none;
 }*/
 
+.about,
+.what-we-do,
+.team,
+.logo-section,
+.contact,
+.calendar-section,
+footer {
+    background: var(--bg-solid);
+}
 
 
 
