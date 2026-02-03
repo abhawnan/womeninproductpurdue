@@ -400,22 +400,29 @@ h2 {
     height: 360px;
 }
 
-/* Name + role under team photos */
-.team-caption {
-    padding: 14px 8px 0;
+/* Always-visible team info under photos */
+.team-info {
+    padding: 16px 8px 0;
     text-align: center;
 }
 
-.team-caption h4 {
+.team-info h3 {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    color: var(--text);
 }
 
-.team-caption p {
+.team-info .role {
     font-size: 14px;
-    color: var(--accent);
     font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.team-info span {
+    font-size: 13px;
+    color: var(--subtext);
 }
 
 
