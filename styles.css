@@ -296,6 +296,41 @@ body.scrolled .navbar {
     margin: 0 12px;
 }
 
+.cursor {
+    display: inline-block;
+    margin-left: 4px;
+    color: var(--accent);
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#typed-text span {
+    color: var(--accent);
+}
+
+#typed-text {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
 .primary-btn {
     background: var(--accent);
     padding: 14px 28px;

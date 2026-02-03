@@ -37,7 +37,10 @@
 
         <!-- HERO CONTENT -->
         <div class="hero-content">
-            <h1>Empowering Future <span>Product Leaders</span></h1>
+            <h1>
+                <span id="typed-text"></span><span class="cursor">|</span>
+            </h1>
+
             <p class="hero-subtext">
                 A student organization dedicated to building the next generation of
                 product managers through hands-on experience, mentorship, and community.
@@ -374,6 +377,40 @@
             document.body.classList.toggle("scrolled", window.scrollY > 10);
         });
     </script>
+
+    <script>
+        const textParts = [
+            { text: "Empowering Future ", highlight: false },
+            { text: "Product Leaders", highlight: true }
+        ];
+
+        const typedText = document.getElementById("typed-text");
+        let partIndex = 0;
+        let charIndex = 0;
+
+        function typeText() {
+            if (partIndex < textParts.length) {
+                const currentPart = textParts[partIndex];
+                const span = currentPart.highlight
+                    ? `<span>${currentPart.text.charAt(charIndex)}</span>`
+                    : currentPart.text.charAt(charIndex);
+
+                typedText.innerHTML += span;
+                charIndex++;
+
+                if (charIndex === currentPart.text.length) {
+                    partIndex++;
+                    charIndex = 0;
+                }
+
+                setTimeout(typeText, 60);
+            }
+        }
+
+        // Start typing after slight delay
+        setTimeout(typeText, 400);
+    </script>
+
 
 
 </body>
