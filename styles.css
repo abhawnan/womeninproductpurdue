@@ -385,23 +385,7 @@ h2 {
         0 0 0 1px rgba(232, 163, 194, 0.35);
 }
 
-/* SLIDER WRAPPER */
-.team-slider-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-/* SLIDER */
-.team-slider {
-    display: flex;
-    gap: 32px;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    width: 100%;
-}
 
 /* Force 3 cards visible */
 .team-card {
@@ -428,17 +412,32 @@ h2 {
 }
 
 
-/* ARROWS */
-.slider-btn {
-    background: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    font-size: 22px;
-    padding: 12px 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s ease;
+/* Team grid layout */
+.team-grid-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+/* Rows */
+.team-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.team-row.center {
+    justify-content: center;
+}
+
+/* Team card sizing */
+.team-card {
+    width: 320px;
+    cursor: pointer;
+}
+
 
 .slider-btn:hover {
     background: rgba(232, 163, 194, 0.15);
