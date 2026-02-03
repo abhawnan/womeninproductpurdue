@@ -44,6 +44,19 @@ body::before {
     overflow: hidden;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.15) 30%,
+            transparent 60%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
 .hero>* {
     position: relative;
     z-index: 2;
@@ -76,6 +89,17 @@ body::before {
     height: 100%;
     display: block;
 }
+
+.hero-wave::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(42, 22, 34, 0.35));
+    pointer-events: none;
+}
+
 
 
 
@@ -681,6 +705,13 @@ h2 {
     .calendar-wrapper iframe {
         height: 500px;
     }
+}
+
+/* Force clean background takeover under hero */
+#about {
+    background: var(--bg);
+    position: relative;
+    z-index: 0;
 }
 
 
