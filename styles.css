@@ -36,17 +36,19 @@ body::before {
 /* Animated background waves */
 .hero {
     position: relative;
-    padding: 160px 20px 300px; /* BIG bottom padding = room for wave */
     text-align: center;
+    padding: 160px 20px 220px;
+    /* extra bottom space for wave */
+    background: #3a1f2e;
+    /* single clean hero color */
     overflow: hidden;
-
-    background: linear-gradient(
-        180deg,
-        #3a1f2e 0%,
-        #2f1824 55%,
-        #2A1622 100%
-    );
 }
+
+.hero>* {
+    position: relative;
+    z-index: 2;
+}
+
 
 
 /* Content stays on top */
@@ -55,17 +57,19 @@ body::before {
     z-index: 3;
 }
 
-/* SVG Wave */
 .hero-wave {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 160px;
-    opacity: 0.9;
+    line-height: 0;
+    z-index: 1;
+}
 
-    z-index: 1; /* BELOW content */
-    pointer-events: none;
+.hero-wave svg {
+    display: block;
+    width: 100%;
+    height: 160px;
 }
 
 
