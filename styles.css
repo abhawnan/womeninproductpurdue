@@ -33,6 +33,37 @@ body::before {
     z-index: -1;
 }
 
+/* Animated background waves */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg,
+            #2A1622,
+            #3a1f2e,
+            #2A1622,
+            #4a2338);
+    background-size: 300% 300%;
+    animation: waveMove 18s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes waveMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
 /* NAVBAR */
 .navbar {
     position: sticky;
@@ -148,9 +179,13 @@ body.scrolled .navbar {
 
 /* HERO */
 .hero {
+    position: relative;
+    /* REQUIRED */
     text-align: center;
     padding: 140px 20px;
+    overflow: hidden;
 }
+
 
 .hero h1 {
     font-size: 56px;
