@@ -38,7 +38,7 @@
         <!-- HERO CONTENT -->
         <div class="hero-content">
             <h1>
-                <span id="typed-text"></span><span class="cursor">|</span>
+                <span id="typed-text"></span><span class="cursor"></span>
             </h1>
 
             <p class="hero-subtext">
@@ -405,6 +405,10 @@
 
                 setTimeout(typeText, 110);
             }
+            if (partIndex === textParts.length) {
+                document.querySelector(".cursor").style.display = "none";
+            }
+
         }
 
         // Start typing after slight delay
