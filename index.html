@@ -331,28 +331,24 @@
         function slideLeft() {
             slider.scrollBy({ left: -360, behavior: "smooth" });
         }
+    </script>
 
+    <script>
         const hero = document.querySelector(".hero");
 
         window.addEventListener("scroll", () => {
             const scrollY = window.scrollY;
             const heroHeight = hero.offsetHeight;
 
-            // Clamp value between 0–1
             const progress = Math.min(scrollY / heroHeight, 1);
 
-            // Move gradient subtly based on scroll
-            const x = 50 + progress * 20; // horizontal shift
-            const y = 50 + progress * 10; // vertical shift
+            const x = 50 + progress * 35;
+            const y = 50 + progress * 25;
 
-            hero.style.setProperty(
-                "--bg-position",
-                `${x}% ${y}%`
-            );
-
-            hero.style.backgroundPosition = `${x}% ${y}%`;
+            hero.style.setProperty("--bg-pos", `${x}% ${y}%`);
         });
     </script>
+
 
     <script>
         window.addEventListener("scroll", () => {
