@@ -69,6 +69,31 @@ body.scrolled .navbar {
     gap: 14px;
 }
 
+/* Nav bar Join Us pill button */
+.nav-links .nav-cta {
+    padding: 8px 18px;
+    border-radius: 999px;
+    /* makes it fully oval */
+    background: var(--accent);
+    color: #391F30;
+    font-weight: 600;
+    margin-left: 32px;
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.nav-links .nav-cta:hover {
+    background: #f1b6d1;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(232, 163, 194, 0.35);
+}
+
+/* Remove underline animation for the pill */
+.nav-links .nav-cta::after {
+    display: none;
+}
+
+
 .logo {
     width: 40px;
 }
