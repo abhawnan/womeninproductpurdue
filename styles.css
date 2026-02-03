@@ -409,6 +409,25 @@ h2 {
     height: 360px;
 }
 
+/* Name + role under team photos */
+.team-caption {
+    padding: 14px 8px 0;
+    text-align: center;
+}
+
+.team-caption h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.team-caption p {
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+
 /* ARROWS */
 .slider-btn {
     background: transparent;
