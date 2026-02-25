@@ -38,7 +38,7 @@ body::before {
     position: relative;
     text-align: center;
     padding: 160px 20px 220px; /* keep the extra bottom space */
-    background: var(--bg);
+    background: #3a1f2e;
     overflow: hidden;
 }
 
