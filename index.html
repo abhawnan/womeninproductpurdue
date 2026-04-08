@@ -428,6 +428,31 @@
         setTimeout(typeText, 400);
     </script>
 
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const status = document.getElementById("form-status");
+
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            };
+
+            try {
+                // TEMP: simulate sending (no backend yet)
+                console.log("Form submitted:", data);
+
+                status.textContent = "Message sent successfully!";
+                form.reset();
+            } catch (error) {
+                status.textContent = "Something went wrong. Please try again.";
+            }
+        });
+    </script>
+
 
 
 </body>
